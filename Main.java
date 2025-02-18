@@ -8,9 +8,24 @@ public class Main
     Scanner sc = new Scanner(System.in);
     String input = "";
 
+    ArrayList<String> words = new ArrayList<String>();
+
     while (!input.equals("STOP"))
     {
-      System.out.println("infinite loop! replace with your code");
+      input = sc.nextLine();
+      if (!input.equals("STOP")){
+        words.add(input);
+      }
     }
+    System.out.println(words.size());
+    System.out.println(words);
+
+    words.add(words.get(0));
+
+    if (words.size()>2){
+      words.remove(0);
+    }
+    
+    System.out.println(words);
   }
 }
